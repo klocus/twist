@@ -1,6 +1,4 @@
 .DS_STORE
-inc/blocks/*
-!inc/blocks/.gitkeep
 dist/*
 !dist/.gitkeep
 node_modules
