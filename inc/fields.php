@@ -8,14 +8,9 @@
 
 namespace Twist\Fields;
 
-use Carbon_Fields\Container;
-use Carbon_Fields\Field;
-
-/**
- * Load Carbon Fields
- */
-function load() {
-    require_once(locate_template('vendor/autoload.php'));
-    \Carbon_Fields\Carbon_Fields::boot();
+$fields_dir = new \DirectoryIterator(__DIR__ . '/fields');
+foreach ($fields_dir as $fileinfo) {
+    if ($fileinfo->isFile() && $fileinfo->getExtension() === 'php') {
+        require_once $fileinfo->getPathname();
+    }
 }
-add_action('after_setup_theme',  __NAMESPACE__ . '\\load');

@@ -8,14 +8,10 @@
 @import "common/variables";
 @import "common/fonts";
 
-// Fixes Seravo's footer overlaying some elements.
-.edit-post-layout__content {
-  padding-bottom: 3rem;
-}
-
 .editor-styles-wrapper {
   .wp-block {
     max-width: 100%;
   }
+
   @import "blocks/blocks";
 }
