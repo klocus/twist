@@ -1,0 +1,20 @@
+/**
+ * Global
+ *
+ * Global styles. Recommendation is to keep these at a minimal
+ * and do most of the styling on block level.
+ */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: theme('fontFamily.primary');
+  color: theme('colors.black');
+  background-color: theme('colors.white');
+}
+
+.container {
+  &--fluid {
+    max-width: unset !important;
+  }
+}

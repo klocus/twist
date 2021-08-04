@@ -1,0 +1,15 @@
+/**
+ * Main
+ *
+ * Styles for frontend.
+ */
+
+@import "common/tailwind";
+@import "common/variables";
+@import "common/helpers";
+@import "common/fonts";
+@import "common/global";
+@import "components/wp-classes";
+@import "components/header";
+@import "components/footer";
+@import "blocks/blocks";
