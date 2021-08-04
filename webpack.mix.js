@@ -1,8 +1,8 @@
 let mix = require('laravel-mix');
 let tailwindcss = require('tailwindcss');
 
-mix.js('src/scripts/main.js', 'dist');
-mix.sass('src/styles/main.scss', 'dist')
+mix.js('src/scripts/main.js', 'dist')
+  .sass('src/styles/main.scss', 'dist')
   .sass('src/styles/login.scss', 'dist')
   .sass('src/styles/admin.scss', 'dist')
   .sass('src/styles/editor.scss', 'dist')
@@ -11,15 +11,13 @@ mix.sass('src/styles/main.scss', 'dist')
     postCss: [tailwindcss('./tailwind.config.js')],
   });
 
-mix.setPublicPath('dist');
-
 mix.browserSync({
   proxy: 'my-site.test',
   files: [
-    'blocks/**/*.php',
-    'dist/**/*',
+    'assets/**/*',
+    'dist/*',
     '*.php',
-    'inc/*.php',
+    'inc/**/*',
     'templates/*.php',
     'views/*.php'
   ]

@@ -14,9 +14,7 @@ Copy this theme to your WordPress instance:
 git clone --depth=1 https://github.com/klocus/twist.git && rm -rf ./twist/.git
 ```
 
-Run `npm install` and check `package.json` to see which scripts you can use while development.
-
-Run `composer install` to use [Carbon Fields](https://carbonfields.net/).
+Run `npm install` and  `composer install` to use [Carbon Fields](https://carbonfields.net/).
 
 ## Setup
 

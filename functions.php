@@ -12,13 +12,13 @@
 
 // Includes.
 $twist_includes = [
-    'inc/cachebuster.php',        // Cache busting.
-    'inc/extras.php',            // Custom functions.
+    'inc/cachebuster.php',      // Cache busting.
+    'inc/extras.php',           // Custom functions.
     'inc/setup.php',            // Theme setup.
-    'inc/security.php',            // Security.
-    'inc/assets.php',            // Assets inclusion.
-    'inc/blocks.php',            // Gutenberg blocks.
-    'inc/fields.php',            // Custom fields
+    'inc/security.php',         // Security.
+    'inc/assets.php',           // Assets inclusion.
+    'inc/blocks.php',           // Gutenberg blocks.
+    'inc/fields.php',           // Custom fields
 ];
 
 foreach ($twist_includes as $file) {
