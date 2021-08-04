@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b07385fadf5e5649b400db93f6ca8a68",
+    "content-hash": "4fe51847847b002702fa4dce73c01e98",
     "packages": [
         {
             "name": "htmlburger/carbon-fields",
-            "version": "v3.1.10",
+            "version": "v3.4.0-beta.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "deee40390e8cd1d50ee215522e47689ef6b4e404"
+                "reference": "00ce47dd3a0c19e4058aa542d1c0e3f51708897e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/deee40390e8cd1d50ee215522e47689ef6b4e404",
-                "reference": "deee40390e8cd1d50ee215522e47689ef6b4e404",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/00ce47dd3a0c19e4058aa542d1c0e3f51708897e",
+                "reference": "00ce47dd3a0c19e4058aa542d1c0e3f51708897e",
                 "shasum": ""
             },
             "require": {
@@ -137,15 +137,24 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2019-12-17T09:45:38+00:00"
+            "support": {
+                "docs": "http://carbonfields.net/docs/",
+                "email": "wordpress@htmlburger.com",
+                "issues": "https://github.com/htmlburger/carbon-fields/issues",
+                "source": "https://github.com/htmlburger/carbon-fields"
+            },
+            "time": "2021-07-28T15:53:49+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "htmlburger/carbon-fields": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
