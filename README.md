@@ -11,7 +11,7 @@ Most files should be documented with a comment at the beginning.
 Copy this theme to your WordPress instance:
 
 ```
-git clone --depth=1 git@github.com:klocus/twist.git && rm -rf ./twist/.git
+git clone --depth=1 https://github.com/klocus/twist.git && rm -rf ./twist/.git
 ```
 
 Run `npm install` and check `package.json` to see which scripts you can use while development.
