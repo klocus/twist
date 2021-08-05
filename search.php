@@ -5,22 +5,10 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
-get_header(); ?>
+$views = ['search.twig', 'archive.twig', 'index.twig'];
 
-    <main class="main main--search">
-        <section class="main__content">
-            <h1><?php printf(esc_html__('Search Results for: %s', 'twist'), '<span>' . get_search_query() . '</span>'); ?></h1>
-            <?php 
-            if (have_posts()):
-                while (have_posts()): 
-                    the_post();
-                    get_template_part('views/content', 'search');
-                endwhile; 
-            else:
-                get_template_part('views/content', 'none');
-            endif;
-            ?>
-        </section>
-  </main>
+$context          = Timber\Timber::context();
+$context['title'] = 'Search results for ' . get_search_query();
+$context['posts'] = new Timber\PostQuery();
 
-<?php get_footer(); ?>
+Timber\Timber::render($views, $context);

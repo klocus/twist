@@ -1,30 +1,11 @@
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-		window.config = window.config || {};
-		window.config.baseUrl = "<?php echo get_bloginfo('url'); ?>";
-	</script>
-	<?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-    <header class="header">
-        <div class="header__content">
-            <a class="header__home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-            <nav class="header__nav nav-primary">
-                <?php
-                if (has_nav_menu('primary_navigation')) :
-                    wp_nav_menu(
-                        [
-                            'theme_location' => 'primary_navigation',
-                            'menu_class'     => 'nav',
-                        ]
-                    );
-                endif;
-                ?>
-            </nav>
-        </div>
-    </header>
+<?php
+/**
+ * Third party plugins that hijack the theme will call wp_head() to get the header template.
+ * We use this to start our output buffer and render into the view/page-plugin.twig template in footer.php
+ *
+ * If you're not using a plugin that requries this behavior (ones that do include Events Calendar Pro and
+ * WooCommerce) you can delete this file and footer.php
+ */
+
+$GLOBALS['timberContext'] = Timber\Timber::context();
+ob_start();

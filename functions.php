@@ -29,13 +29,3 @@ foreach ($twist_includes as $file) {
     include_once $filepath;
 }
 unset($file, $filepath);
-
-/**
- * Load Carbon Fields
- */
-function load() {
-    require_once(locate_template('vendor/autoload.php'));
-    \Carbon_Fields\Carbon_Fields::boot();
-}
-
-add_action('after_setup_theme', 'load');

@@ -10,17 +10,11 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
-get_header(); ?>
-
-    <main class="main main--index">
-        <section class="main__content">
-            <?php 
-                while (have_posts()):
-                    the_post();
-                    get_template_part('views/content', get_post_format());
-                endwhile;
-            ?>
-        </section>
-  </main>
-
-<?php get_footer(); ?>
+$context          = Timber\Timber::context();
+$context['posts'] = new Timber\PostQuery();
+$context['foo']   = 'bar';
+$views            = ['index.twig'];
+if (is_home()) {
+	array_unshift($views, 'front-page.twig', 'home.twig');
+}
+Timber\Timber::render($views, $context);

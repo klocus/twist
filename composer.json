@@ -1,5 +1,6 @@
 {
   "require": {
-    "htmlburger/carbon-fields": "^3@beta"
+    "htmlburger/carbon-fields": "^3@beta",
+    "timber/timber": "^1.18"
   }
 }

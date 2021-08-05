@@ -7,10 +7,31 @@
 
 namespace Twist\Setup;
 
+use Carbon_Fields;
+use Timber;
+
 /**
  * Theme setup
  */
-function setup() {
+add_action('after_setup_theme', function() {
+	// Composer’s autoload
+	require_once(locate_template('vendor/autoload.php'));
+
+	// Enable Timber
+	// https://timber.github.io/docs/getting-started/setup/
+	$timber = new \Timber\Timber();
+	Timber\Timber::$dirname = ['views'];
+	Timber\Timber::$autoescape = false;
+
+	add_filter('timber/context', function($context) {
+		$context['menu'] = new Timber\Menu();
+		return $context;
+	});
+
+	// Enable Carbon Fields
+	// https://docs.carbonfields.net/quickstart.html
+	Carbon_Fields\Carbon_Fields::boot();
+
 	// Make theme available for translation
 	// Community translations can be found at https://github.com/roots/sage-translations .
 	load_theme_textdomain('twist', get_template_directory() . '/lang');
@@ -39,5 +60,4 @@ function setup() {
 
 	// Enable responsive embeds
 	add_theme_support('responsive-embeds');
-}
-add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
+});

@@ -1,0 +1,12 @@
+<header id="header">
+  {% block header %}
+    <div class="wrapper">
+      <h1 class="logo">
+        <a class="logo-link" href="{{ site.url }}" rel="home">{{ site.name }}</a>
+      </h1>
+      <nav id="nav" role="navigation">
+        {% include "components/menu.twig" with {'items': menu.get_items} %}
+      </nav>
+    </div>
+  {% endblock %}
+</header>

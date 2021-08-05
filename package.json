@@ -1,5 +1,5 @@
 {
-  "name": "TWIST",
+  "name": "twist",
   "version": "1.0.0",
   "private": true,
   "description": "Tailwind WordPress Starter Theme",
@@ -11,8 +11,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "cross-env": "^6.0.3",
-    "laravel-mix": "^6.0.0"
+    "laravel-mix": "^6.0.0",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0"
   },
   "dependencies": {
     "tailwindcss": "^2.2.4"

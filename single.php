@@ -5,17 +5,12 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
-get_header(); ?>
+$context         = Timber\Timber::context();
+$timber_post     = Timber\Timber::get_post();
+$context['post'] = $timber_post;
 
-    <main class="main main--single">
-        <section class="main__content">
-            <?php 
-                while (have_posts()):
-                    the_post();
-                    get_template_part('views/content', get_post_format());
-                endwhile;
-            ?>
-        </section>
-  </main>
-
-<?php get_footer(); ?>
+if (post_password_required($timber_post->ID)) {
+	Timber\Timber::render('single-password.twig', $context);
+} else {
+	Timber\Timber::render(['single-' . $timber_post->ID . '.twig', 'single-' . $timber_post->post_type . '.twig', 'single-' . $timber_post->slug . '.twig', 'single.twig'], $context);
+}

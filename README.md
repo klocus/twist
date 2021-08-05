@@ -1,6 +1,6 @@
 # TWIST
 
-*WordPress Starter Theme*
+*WordPress Starter Theme with Twig, custom fields and Tailwind CSS.*
 
 ## Documentation
 

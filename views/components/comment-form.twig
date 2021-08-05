@@ -1,0 +1,28 @@
+<div class="comment-form">
+  <h3>{{ __('Add comment', 'twist') }}</h3>
+  <form class="comment-form" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
+    {% if  user %}
+      <input type="hidden" name="email" value="{{ user.email }}">
+      <input type="hidden" name="author" value="{{ user.name }}">
+      <input type="hidden" name="url" value="{{ user.link }}">
+    {% else %}
+      <label>{{ __('Email', 'twist') }}<br>
+        <input required name="email" type="email" id="email">
+      </label>
+      <label>{{ __('Name', 'twist') }}<br>
+        <input required name="author" type="text">
+      </label>
+      <label>{{ __('Website', 'twist') }}<br>
+        <input name="url" type="url">
+      </label>
+    {% endif %}
+    <label>{{ __('Comment', 'twist') }}<br>
+      <textarea placeholder="{{ __('Leave a comment...', 'twist') }}" name="comment" cols="60" rows="3"></textarea>
+    </label>
+    <input name="comment_post_ID" value="{{ post.id }}" type="hidden">
+    <input name="comment_parent"  value="{{ comment.ID|default('0') }}" type="hidden">
+    <button type="submit" name="Submit" class="btn">{{ __('Send', 'twist') }}</button>
+    <button type="reset">{{ __('Cancel', 'twist') }}</button>
+    <p>{{ __('Your comment will be revised by the site if needed.', 'twist') }}</p>
+  </form>
+</div>

@@ -1,0 +1,159 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: TWIST\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-05 12:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.8\n"
+"X-Domain: twist"
+
+#: views/components/comment-form.twig:2
+msgid "Add comment"
+msgstr ""
+
+#: inc/blocks/example.php:14
+msgid "Block Content"
+msgstr ""
+
+#: inc/blocks/example.php:12
+msgid "Block Heading"
+msgstr ""
+
+#: inc/blocks/example.php:13
+msgid "Block Image"
+msgstr ""
+
+#: views/single.twig:11
+msgid "By"
+msgstr ""
+
+#: views/components/comment-form.twig:25
+msgid "Cancel"
+msgstr ""
+
+#: views/components/comment-form.twig:19
+msgid "Comment"
+msgstr ""
+
+#: views/single.twig:23
+msgid "Comments"
+msgstr ""
+
+#: views/single.twig:31
+msgid "Comments for this post are closed"
+msgstr ""
+
+#: inc/extras.php:33
+msgid "Continued"
+msgstr ""
+
+#: views/single.twig:9
+msgid "edit"
+msgstr ""
+
+#: views/components/comment-form.twig:9
+msgid "Email"
+msgstr ""
+
+#: functions.php:27
+#, php-format
+msgid "Error locating %s for inclusion"
+msgstr ""
+
+#: inc/blocks/example.php:10
+msgid "Example"
+msgstr ""
+
+#: views/components/pagination.twig:8 views/components/pagination.twig:12
+msgid "First"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://klocus.pl"
+msgstr ""
+
+#: views/components/pagination.twig:54 views/components/pagination.twig:58
+msgid "Last"
+msgstr ""
+
+#: views/components/comment-form.twig:12
+msgid "Name"
+msgstr ""
+
+#: views/components/pagination.twig:43 views/components/pagination.twig:47
+msgid "Next"
+msgstr ""
+
+#: views/single-password.twig:5
+msgid "Password"
+msgstr ""
+
+#. Author of the theme
+msgid "Paweł Klockiewicz"
+msgstr ""
+
+#: views/components/pagination.twig:19 views/components/pagination.twig:23
+msgid "Previous"
+msgstr ""
+
+#: inc/setup.php:47
+msgid "Primary Navigation"
+msgstr ""
+
+#: views/components/comment.twig:8
+msgid "replies"
+msgstr ""
+
+#: views/components/comment.twig:2
+msgid "says"
+msgstr ""
+
+#: views/components/comment-form.twig:24
+msgid "Send"
+msgstr ""
+
+#: views/base.twig:24
+msgid "Sorry, no content"
+msgstr ""
+
+#: views/404.twig:4
+msgid "Sorry, we couldn't find what you're looking for."
+msgstr ""
+
+#: inc/fields/theme-options.php:12
+msgid "Text Field"
+msgstr ""
+
+#: inc/fields/theme-options.php:10
+msgid "Theme Options"
+msgstr ""
+
+#: views/archive.twig:7
+msgid "This is my archive"
+msgstr ""
+
+#. Name of the theme
+msgid "TWIST"
+msgstr ""
+
+#: views/components/comment-form.twig:15
+msgid "Website"
+msgstr ""
+
+#. Description of the theme
+msgid "WordPress Starter Theme"
+msgstr ""
+
+#: views/components/comment-form.twig:26
+msgid "Your comment will be revised by the site if needed."
+msgstr ""
