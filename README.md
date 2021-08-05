@@ -46,6 +46,5 @@ twist # Theme root
 │       ├── blocks # Gutenberg block styles
 │       ├── common # General styles
 │       └── components # Component styles (ex. Footer & Header)
-├── templates # Page templates
-└── views # Block & content views
+└── views # Twig tamplates, blocks, components
 ```
