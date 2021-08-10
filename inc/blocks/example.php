@@ -14,6 +14,7 @@ add_action('carbon_fields_register_fields', function () {
             Field::make('rich_text', 'content', __('Block Content', 'twist')),
         ))
         ->set_render_callback(function ($fields, $attributes, $inner) {
-	        Timber::render(['blocks/example.twig'], compact(['fields', 'attributes', 'inner']));
+            $context = array_merge(Timber::context(), compact(['fields', 'attributes', 'inner']));
+	        Timber::render(['blocks/example.twig'], $context);
         });
 });

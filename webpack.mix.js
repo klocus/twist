@@ -16,9 +16,8 @@ mix.browserSync({
   files: [
     'assets/**/*',
     'dist/*',
-    '*.php',
     'inc/**/*',
-    'templates/*.php',
-    'views/*.php'
+    '*.php',
+    'views/**/*'
   ]
 });

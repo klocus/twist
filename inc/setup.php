@@ -17,6 +17,10 @@ add_action('after_setup_theme', function() {
 	// Composer’s autoload
 	require_once(locate_template('vendor/autoload.php'));
 
+	// Enable Carbon Fields
+	// https://docs.carbonfields.net/quickstart.html
+	Carbon_Fields\Carbon_Fields::boot();
+
 	// Enable Timber
 	// https://timber.github.io/docs/getting-started/setup/
 	$timber = new \Timber\Timber();
@@ -25,12 +29,9 @@ add_action('after_setup_theme', function() {
 
 	add_filter('timber/context', function($context) {
 		$context['menu'] = new Timber\Menu();
+		$context['options'] = get_theme_options();
 		return $context;
 	});
-
-	// Enable Carbon Fields
-	// https://docs.carbonfields.net/quickstart.html
-	Carbon_Fields\Carbon_Fields::boot();
 
 	// Make theme available for translation
 	// Community translations can be found at https://github.com/roots/sage-translations .
@@ -61,3 +62,13 @@ add_action('after_setup_theme', function() {
 	// Enable responsive embeds
 	add_theme_support('responsive-embeds');
 });
+
+function get_theme_options(): array {
+    global $wpdb;
+    $query = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}options WHERE option_name LIKE '%_crb%'");
+    $options = [];
+    foreach ($query as $value) {
+        $options[str_replace('_crb_', '', $value->option_name)] = $value->option_value;
+    }
+    return $options;
+}

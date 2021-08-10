@@ -40,6 +40,7 @@ twist # Theme root
 ├── lang # Pot files
 ├── src # Source files
 │   ├── scripts # JavaScript
+│   │   ├── components # JS components
 │   │   ├── routes # Class-based routing
 │   │   └── util # Utilities
 │   └── styles # SCSS styles

@@ -3,6 +3,7 @@ module.exports = {
     './*.php'
   ],
   darkMode: false, // or 'media' or 'class'
+  important: true,
   theme: {
     fontFamily: {
       primary: 'Oswald',
