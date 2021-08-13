@@ -9,7 +9,7 @@ use Timber\Timber;
 add_action('carbon_fields_register_fields', function () {
     Block::make(__('Example', 'twist'))
         ->add_fields(array(
-            Field::make('text', 'heading', __('Block Heading', 'twist')),
+            Field::make('text', 'title', __('Block Title', 'twist')),
             Field::make('image', 'image', __('Block Image', 'twist')),
             Field::make('rich_text', 'content', __('Block Content', 'twist')),
         ))

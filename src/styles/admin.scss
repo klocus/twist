@@ -4,6 +4,11 @@
  * Styles for Admin Panel.
  */
 
+.php-error #adminmenuback,
+.php-error #adminmenuwrap {
+  margin-top: 0;
+}
+
 #footer-thankyou {
   display: none;
 }

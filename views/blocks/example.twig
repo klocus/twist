@@ -1,14 +1,14 @@
-<div class="block">
-    <div class="block-heading">
-        <h1>{{ fields.heading }}</h1>
+<div class="example-block">
+    <div class="title">
+        <h1>{{ fields.title }}</h1>
     </div>
 
-    <div class="block-image">
+    <div class="image">
         {% set image = Image(fields.image) %}
-        <img src="{{ image.src }}" alt="" />
+        <img src="{{ image.src }}" alt="{{ image.alt }}" />
     </div>
 
-    <div class="block-content">
+    <div class="content">
         {{ fields.content }}
     </div>
 </div>

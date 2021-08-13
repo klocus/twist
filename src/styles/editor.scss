@@ -4,16 +4,28 @@
  * Styles for the Gutenberg Editor.
  */
 
+@import "common/tailwind";
 @import "common/helpers";
 @import "common/variables";
-@import "common/fonts";
+
+img {
+  border-style: none;
+}
 
 .editor-styles-wrapper {
   .wp-block {
     max-width: 100%;
     border: 1px dashed silver;
     padding: 8px;
-  }
 
-  @import "blocks/blocks";
+    .cf-block__preview {
+      ol,
+      ul {
+        list-style-type: none;
+      }
+
+      @import "components/all";
+      @import "blocks/all";
+    }
+  }
 }

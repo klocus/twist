@@ -11,7 +11,12 @@ export default {
     element.addEventListener('click', () => {
       const target = document.querySelector(element.dataset.target);
       element.classList.toggle('-active');
-      target.classList.toggle('-active');
+
+      if(target) {
+        target.classList.toggle('-active');
+      } else {
+        document.body.classList.toggle('hamburger-active');
+      }
     });
   }
 }

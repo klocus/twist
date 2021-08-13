@@ -1,0 +1,56 @@
+/**
+ * Hamburger Component (JS)
+ */
+
+.hamburger {
+  width: 25px;
+  height: 20px;
+  position: relative;
+
+  &:before,
+  &:after,
+  > span:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    clip-path: ellipse(50% 100% at 50% 50%);
+    background-color: theme('colors.black');
+    transition: 0.4s all;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  > span:before {
+    top: 8px;
+  }
+
+  &:after {
+    top: 16px;
+    width: 60%;
+  }
+
+  &.-active,
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &.-active {
+    &:before {
+      transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    > span:before {
+      opacity: 0;
+    }
+
+    &:after {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+  }
+}
