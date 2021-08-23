@@ -26,7 +26,7 @@ add_filter('rest_authentication_errors', function($result) {
     if (!empty($result)) {
         return $result;
     }
-    if (!is_user_logged_in()) {
+    if (!is_user_logged_in() && empty($_POST['_wpcf7'])) {
         return new \WP_Error('rest_not_logged_in', 'You are not currently logged in.', ['status' => 401]);
     }
     return $result;
