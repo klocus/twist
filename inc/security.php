@@ -31,3 +31,26 @@ add_filter('rest_authentication_errors', function($result) {
     }
     return $result;
 });
+
+/**
+ * Disable XML-RPC (pingbacks and trackbacks)
+ */
+add_filter('xmlrpc_enabled', '__return_false');
+
+/**
+ * Disable RSS Feeds
+ */
+function disable_feed() {
+    wp_die(__('No feed available, please visit the <a href="' . esc_url(home_url('/')) . '">homepage</a>.', 'twist'));
+}
+
+add_action('do_feed', __NAMESPACE__ . '\\disable_feed', 1);
+add_action('do_feed_rdf', __NAMESPACE__ . '\\disable_feed', 1);
+add_action('do_feed_rss', __NAMESPACE__ . '\\disable_feed', 1);
+add_action('do_feed_rss2', __NAMESPACE__ . '\\disable_feed', 1);
+add_action('do_feed_atom', __NAMESPACE__ . '\\disable_feed', 1);
+add_action('do_feed_rss2_comments', __NAMESPACE__ . '\\disable_feed', 1);
+add_action('do_feed_atom_comments', __NAMESPACE__ . '\\disable_feed', 1);
+
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'feed_links', 2);
