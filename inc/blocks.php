@@ -31,36 +31,36 @@ add_filter('allowed_block_types_all', function ($allowed_blocks) {
             /*
             * Common
             */
-            'core/paragraph',
-            'core/image',
-            'core/heading',
+            // 'core/paragraph',
+            // 'core/image',
+            // 'core/heading',
             // 'core/subhead',
-            'core/gallery',
-            'core/list',
-            'core/quote',
+            // 'core/gallery',
+            // 'core/list',
+            // 'core/quote',
             // 'core/audio',
-            'core/media-text',
-            'core/file',
-            'core/video',
+            // 'core/media-text',
+            // 'core/file',
+            // 'core/video',
             /*
             * Formatting
             */
-            'core/table',
+            // 'core/table',
             // 'core/verse',
             // 'core/code',
             // 'core/freeform' // Classic,
             // 'core/html' // Custom HTML,
             // 'core/preformatted',
-            'core/pullquote',
+            // 'core/pullquote',
             /*
             * Layout
             */
-            'core/button',
-            'core/text-columns', // Columns,
-            'core/columns', // Columns,
+            // 'core/button',
+            // 'core/text-columns', // Columns,
+            // 'core/columns', // Columns,
             // 'core/more',
             // 'core/nextpage' // Page break,
-            'core/separator',
+            // 'core/separator',
             'core/spacer',
             /*
             * Widgets
@@ -75,14 +75,14 @@ add_filter('allowed_block_types_all', function ($allowed_blocks) {
             */
             // 'core/embed',
             // 'core-embed/twitter',
-            'core-embed/youtube',
+            // 'core-embed/youtube',
             // 'core-embed/facebook',
             // 'core-embed/instagram',
             // 'core-embed/wordpress',
             // 'core-embed/soundcloud',
             // 'core-embed/spotify',
             // 'core-embed/flickr',
-            'core-embed/vimeo',
+            // 'core-embed/vimeo',
             // 'core-embed/animoto',
             // 'core-embed/cloudup',
             // 'core-embed/collegehumor',

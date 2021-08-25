@@ -95,6 +95,11 @@ add_filter('upload_mimes', function ($mimes) {
 });
 
 /**
+ * Remove <p> tag from Contact Form 7
+ */
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+/**
  * Show Breadcrumbs
  *
  * @param string|bool $home

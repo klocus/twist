@@ -23,7 +23,7 @@ add_action('after_setup_theme', function() {
 
 	// Enable Timber
 	// https://timber.github.io/docs/getting-started/setup/
-	$timber = new \Timber\Timber();
+	new Timber\Timber();
 	Timber\Timber::$dirname = ['views'];
 	Timber\Timber::$autoescape = false;
 
@@ -63,6 +63,9 @@ add_action('after_setup_theme', function() {
 	add_theme_support('responsive-embeds');
 });
 
+/**
+ * Get values from Carbon Fields – Theme Options
+ */
 function get_theme_options(): array {
     global $wpdb;
     $query = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}options WHERE option_name LIKE '%_crb%'");
